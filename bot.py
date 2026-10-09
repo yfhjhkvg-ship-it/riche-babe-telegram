@@ -11,7 +11,7 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=["start"])
 def start(message):
-        bot.reply_to(
+bot.reply_to(
         message,
         "Bienvenue chez Riche Babe ! 👑\n\n"
         "Ton bot est en ligne.\n"
@@ -45,5 +45,6 @@ def thimbles(message):
         "• Ne mise que ce que tu peux te permettre de perdre.\n\n"
         "💡 Riche Babe ne peut pas prédire la position réelle de la boule."
     )
+
 
 bot.infinity_polling()
