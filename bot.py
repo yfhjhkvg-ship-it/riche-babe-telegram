@@ -11,7 +11,8 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=["start"])
 def start(message):
-bot.reply_to(
+    # CORRECTION : Ajout de 4 espaces d'indentation ici
+    bot.reply_to(
         message,
         "Bienvenue chez Riche Babe ! 👑\n\n"
         "Ton bot est en ligne.\n"
@@ -27,11 +28,6 @@ def help_command(message):
         "/help - Afficher l'aide"
     )
 
-@bot.message_handler(func=lambda message: True)
-def echo(message):
-    bot.reply_to(message, "👑 Riche Babe te répond !")
-
-
 @bot.message_handler(commands=["thimbles"])
 def thimbles(message):
     bot.reply_to(
@@ -45,5 +41,12 @@ def thimbles(message):
         "• Ne mise que ce que tu peux te permettre de perdre.\n\n"
         "💡 Riche Babe ne peut pas prédire la position réelle de la boule."
     )
+
+# Note : La fonction echo (qui capture tous les messages textuels) a été déplacée 
+# tout en bas, juste avant le polling. Si elle reste au milieu, elle risque de 
+# bloquer la commande /thimbles située après elle.
+@bot.message_handler(func=lambda message: True)
+def echo(message):
+    bot.reply_to(message, "👑 Riche Babe te répond !")
 
 bot.infinity_polling()
