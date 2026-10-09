@@ -32,3 +32,17 @@ def echo(message):
     bot.reply_to(message, "👑 Riche Babe te répond !")
 
 bot.infinity_polling()
+
+@bot.message_handler(commands=["thimbles"])
+def gobelets(message):
+    bot.reply_to(
+        message,
+        "🥤 RICHE BABE - THIMBLES \n\n"
+        "🎯 Si 3 gobelets sont proposés et qu'une seule boule est cachée :\n"
+        "• Chance théorique au hasard : 1 sur 3 (33,3 %).\n\n"
+        "⚠️ RISQUES :\n"
+        "• Les mélanges rapides rendent le suivi incertain.\n"
+        "• Aucune méthode ne garantit de trouver la boule.\n"
+        "• Ne mise que ce que tu peux te permettre de perdre.\n\n"
+        "💡 Riche Babe ne peut pas prédire la position réelle de la boule."
+    )
