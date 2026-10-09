@@ -45,5 +45,4 @@ def thimbles(message):
         "• Ne mise que ce que tu peux te permettre de perdre.\n\n"
         "💡 Riche Babe ne peut pas prédire la position réelle de la boule."
     )
-
 bot.infinity_polling()
