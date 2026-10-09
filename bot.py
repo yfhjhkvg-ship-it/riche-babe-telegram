@@ -46,7 +46,4 @@ def thimbles(message):
         "💡 Riche Babe ne peut pas prédire la position réelle de la boule."
     )
 
-
-            
-
 bot.infinity_polling()
