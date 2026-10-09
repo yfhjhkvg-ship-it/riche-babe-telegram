@@ -31,10 +31,9 @@ def help_command(message):
 def echo(message):
     bot.reply_to(message, "👑 Riche Babe te répond !")
 
-bot.infinity_polling()
 
 @bot.message_handler(commands=["thimbles"])
-def gobelets(message):
+def thimbles(message):
     bot.reply_to(
         message,
         "🥤 RICHE BABE - THIMBLES \n\n"
